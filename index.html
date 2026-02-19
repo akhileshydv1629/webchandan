@@ -1,81 +1,328 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstraTech Industrial Solutions | Precision Manufacturing</title>
+<title>IndustroTech Pvt Ltd</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<meta name="description" content="Leading manufacturer of precision engineered industrial components in India. OEM manufacturing and global export solutions.">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-<link rel="stylesheet" href="style.css">
+body{
+background:#f4f6f9;
+color:#333;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#ff3b3b;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+nav ul li a:hover{
+color:#ff3b3b;
+}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1581090700227-1e37b190418e') no-repeat center/cover;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+max-width:600px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:25px;
+}
+
+.btn{
+background:#ff3b3b;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:5px;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+font-size:28px;
+font-weight:600;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:6px;
+margin-bottom:15px;
+}
+
+.about{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+max-width:500px;
+border-radius:8px;
+}
+
+.about-text{
+flex:1;
+}
+
+.why{
+background:#111;
+color:white;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.news{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.news img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.contact{
+background:#f9f9f9;
+}
+
+form{
+display:grid;
+gap:15px;
+max-width:600px;
+margin:auto;
+}
+
+input,textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#ff3b3b;
+color:white;
+border:none;
+padding:12px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px 10%;
+}
+
+@media(max-width:768px){
+nav ul{
+display:none;
+}
+}
+</style>
 </head>
-
 <body>
 
 <header>
+<div class="logo">IndustroTech</div>
 <nav>
-<div class="logo">AstraTech Industrial</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<div class="nav-links" id="navLinks">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
-</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 </header>
 
-<section class="hero" id="home">
+<section class="hero">
 <div class="hero-content">
-<h1>Engineering Excellence. Delivering Precision.</h1>
-<p>Trusted Industrial Manufacturing Partner for OEM & Global Clients</p>
-<a href="#contact" class="btn">Request a Quote</a>
-<a href="brochure.pdf" class="btn">Download Brochure</a>
+<h1>Leading Manufacturer of Industrial Components</h1>
+<p>We specialize in high-quality electronic and mechanical components for global industries.</p>
+<a href="#contact" class="btn">Get In Touch</a>
 </div>
 </section>
 
-<section class="section" id="about">
-<h2>About Us</h2>
-<p>
-AstraTech Industrial Solutions Pvt. Ltd. is a leading manufacturer of high-performance industrial components based in India. 
-We provide custom OEM manufacturing solutions with strict quality standards and global export capabilities.
-</p>
-</section>
-
-<section class="section" id="products">
-<h2>Our Products</h2>
-<div class="grid">
+<section id="products">
+<h2 class="section-title">Our Products</h2>
+<div class="products">
 <div class="card">
+<img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
 <h3>Industrial Coils</h3>
-<p>Precision copper coils for automation & control systems.</p>
+<p>High precision custom coils for multiple applications.</p>
 </div>
+
 <div class="card">
-<h3>Electromechanical Assemblies</h3>
-<p>Custom assemblies designed for OEM applications.</p>
+<img src="https://images.unsplash.com/photo-1581091870627-3c3c66aa79b4">
+<h3>Motors</h3>
+<p>Advanced motor solutions for automation systems.</p>
 </div>
+
 <div class="card">
-<h3>Control Panels</h3>
-<p>High reliability industrial control systems.</p>
+<img src="https://images.unsplash.com/photo-1581092795360-5a0c0ed7b26c">
+<h3>Relay Systems</h3>
+<p>Reliable electronic relay components for OEMs.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+<h3>Custom Engineering</h3>
+<p>Tailor-made industrial solutions built to specification.</p>
 </div>
 </div>
 </section>
 
-<section class="section" id="contact">
-<h2>Contact Us</h2>
+<section id="about" class="about">
+<img src="https://images.unsplash.com/photo-1581092588429-4f8ed9ed7a4b">
+<div class="about-text">
+<h2>About Us</h2>
+<p>IndustroTech Pvt Ltd is a leading manufacturer of industrial components with over 25 years of experience. We serve OEMs across global markets with innovative and precision-engineered solutions.</p>
+</div>
+</section>
+
+<section class="why">
+<h2 class="section-title">Why Choose Us?</h2>
+<div class="why-grid">
+<div>
+<h3>25+ Years Experience</h3>
+<p>Trusted expertise in industrial manufacturing.</p>
+</div>
+<div>
+<h3>Global Export</h3>
+<p>Serving clients across USA, Europe & Asia.</p>
+</div>
+<div>
+<h3>Quality Assurance</h3>
+<p>Certified quality systems ensuring reliability.</p>
+</div>
+</div>
+</section>
+
+<section id="news">
+<h2 class="section-title">Latest News</h2>
+<div class="news">
+<div>
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<h3>New Production Line Launched</h3>
+<p>Expanding capacity for international clients.</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1581091215367-59ab6b6a5c1b">
+<h3>Industrial Expo 2026</h3>
+<p>Join us at Global Industrial Expo.</p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2 class="section-title">Contact Us</h2>
 <form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
+<input type="text" placeholder="Company Name">
 <textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send Inquiry</button>
+<button type="submit">Submit</button>
 </form>
 </section>
 
 <footer>
-© 2026 AstraTech Industrial Solutions Pvt. Ltd.
+<p>© 2026 IndustroTech Pvt Ltd | Industrial Area, Mumbai, India</p>
 </footer>
 
-<a href="https://wa.me/919000000000" class="whatsapp">💬</a>
-
-<script src="script.js"></script>
 </body>
 </html>

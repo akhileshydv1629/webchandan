@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rudrakshi Enterprises</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
@@ -27,23 +27,27 @@ position:fixed;
 width:100%;
 top:0;
 z-index:1000;
+flex-wrap:wrap; /* important */
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
+font-size:20px;
 color:#00b4d8;
+font-weight:600;
 }
 
+/* NAV FIX */
 nav{
 display:flex;
-align-items:center;
+flex-wrap:wrap;
+justify-content:flex-end;
 }
 
 nav a{
-margin-left:20px;
+margin-left:15px;
 color:white;
 text-decoration:none;
+font-size:14px;
 }
 
 /* HERO */
@@ -63,67 +67,67 @@ max-width:600px;
 }
 
 .hero h1{
-font-size:42px;
+font-size:40px;
 margin-bottom:15px;
 }
 
 .btn{
 background:#00b4d8;
 color:white;
-padding:12px 25px;
+padding:10px 20px;
 text-decoration:none;
 border-radius:5px;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
-padding:80px 8%;
+padding:70px 8%;
 }
 
 .title{
 text-align:center;
-margin-bottom:40px;
-font-size:28px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-/* CARD */
-.card{
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:6px;
-margin-bottom:10px;
+margin-bottom:30px;
+font-size:26px;
 }
 
 /* ABOUT */
 .about{
 display:flex;
 flex-wrap:wrap;
-gap:40px;
+gap:30px;
 align-items:center;
 }
 
 .about img{
 width:100%;
-max-width:500px;
+max-width:450px;
 border-radius:8px;
 }
 
-/* DARK SECTION FIXED */
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:6px;
+margin-bottom:10px;
+}
+
+/* DARK SECTION FIX */
 .dark{
 background:#0d1b2a;
 color:white;
@@ -139,7 +143,7 @@ footer{
 background:#0d1b2a;
 color:white;
 text-align:center;
-padding:20px;
+padding:15px;
 }
 
 /* WHATSAPP */
@@ -151,14 +155,31 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:22px;
 text-decoration:none;
+font-size:22px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.hero h1{font-size:28px;}
-.about{flex-direction:column;text-align:center;}
+
+nav{
+justify-content:center;
+}
+
+nav a{
+margin:8px 10px;
+font-size:13px;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.about{
+flex-direction:column;
+text-align:center;
+}
+
 }
 </style>
 </head>
@@ -167,6 +188,7 @@ text-decoration:none;
 
 <header>
 <div class="logo">Rudrakshi Enterprises</div>
+
 <nav>
 <a href="#">Home</a>
 <a href="#about">About</a>
@@ -257,10 +279,10 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 <div class="card">
 <h3>Target Customers</h3>
 <ul>
-<li>🏭 Factories</li>
-<li>🛠 Workshops</li>
-<li>🏗 Construction companies</li>
-<li>🏢 Offices</li>
+<li>Factories</li>
+<li>Workshops</li>
+<li>Construction companies</li>
+<li>Offices</li>
 </ul>
 </div>
 
@@ -271,7 +293,7 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 
 <div class="card">
 <h3>Profit Potential</h3>
-<p>Profit comes from wholesale purchasing and contract supply.</p>
+<p>Wholesale purchasing and contract supply to businesses.</p>
 </div>
 
 <div class="card">
@@ -289,7 +311,7 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 <ul>
 <li>Increase product categories</li>
 <li>Partner with suppliers</li>
-<li>Expand industrial clients</li>
+<li>Expand clients</li>
 </ul>
 </div>
 
@@ -311,7 +333,6 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 © 2026 Rudrakshi Enterprises
 </footer>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/919370793235" class="whatsapp">💬</a>
 
 </body>

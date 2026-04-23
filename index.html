@@ -10,7 +10,10 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{background:#f4f6f9;color:#333;padding-top:70px;}
+body{
+background:#f4f6f9;
+color:#333;
+}
 
 /* HEADER */
 header{
@@ -22,10 +25,20 @@ justify-content:space-between;
 align-items:center;
 position:fixed;
 width:100%;
+top:0;
 z-index:1000;
 }
 
-.logo{font-size:22px;font-weight:700;color:#00b4d8;}
+.logo{
+font-size:22px;
+font-weight:700;
+color:#00b4d8;
+}
+
+nav{
+display:flex;
+align-items:center;
+}
 
 nav a{
 margin-left:20px;
@@ -36,6 +49,7 @@ text-decoration:none;
 /* HERO */
 .hero{
 height:100vh;
+margin-top:70px;
 background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
 url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
 display:flex;
@@ -44,9 +58,14 @@ padding:0 8%;
 color:white;
 }
 
-.hero-content{max-width:600px;}
+.hero-content{
+max-width:600px;
+}
 
-.hero h1{font-size:42px;margin-bottom:15px;}
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
 
 .btn{
 background:#00b4d8;
@@ -57,8 +76,15 @@ border-radius:5px;
 }
 
 /* SECTION */
-section{padding:80px 8%;}
-.title{text-align:center;margin-bottom:40px;font-size:28px;}
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+font-size:28px;
+}
 
 /* GRID */
 .grid{
@@ -97,9 +123,14 @@ max-width:500px;
 border-radius:8px;
 }
 
-/* DARK SECTION */
+/* DARK SECTION FIXED */
 .dark{
 background:#0d1b2a;
+color:white;
+}
+
+.dark .card{
+background:#1b263b;
 color:white;
 }
 
@@ -217,7 +248,7 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 </div>
 </section>
 
-<!-- BUSINESS DETAILS -->
+<!-- BUSINESS -->
 <section id="business" class="dark">
 <h2 class="title">Business Details</h2>
 
@@ -226,21 +257,21 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 <div class="card">
 <h3>Target Customers</h3>
 <ul>
-<li>Factories</li>
-<li>Workshops</li>
-<li>Construction companies</li>
-<li>Offices</li>
+<li>🏭 Factories</li>
+<li>🛠 Workshops</li>
+<li>🏗 Construction companies</li>
+<li>🏢 Offices</li>
 </ul>
 </div>
 
 <div class="card">
 <h3>Investment Plan</h3>
-<p>Initial investment for stock, transport, and supplier purchases.</p>
+<p>Initial investment for stock, packaging, transport, and supplier purchases.</p>
 </div>
 
 <div class="card">
 <h3>Profit Potential</h3>
-<p>Wholesale purchasing and contract supply to businesses.</p>
+<p>Profit comes from wholesale purchasing and contract supply.</p>
 </div>
 
 <div class="card">
@@ -256,9 +287,9 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 <div class="card">
 <h3>Future Expansion</h3>
 <ul>
-<li>Increase product range</li>
-<li>Add suppliers</li>
-<li>Expand clients</li>
+<li>Increase product categories</li>
+<li>Partner with suppliers</li>
+<li>Expand industrial clients</li>
 </ul>
 </div>
 
@@ -280,6 +311,7 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 © 2026 Rudrakshi Enterprises
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/919370793235" class="whatsapp">💬</a>
 
 </body>

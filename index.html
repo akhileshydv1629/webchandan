@@ -10,9 +10,8 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{background:#f5f7fa;color:#333;padding-top:70px;}
+body{background:#f5f7fa;color:#333;padding-top:70px;line-height:1.6;}
 
-/* HEADER */
 header{
 background:#0d1b2a;
 color:white;
@@ -26,7 +25,7 @@ top:0;
 z-index:1000;
 }
 
-.logo{font-weight:600;font-size:20px;color:#00b4d8;}
+.logo{font-size:20px;color:#00b4d8;font-weight:600;}
 
 nav a{
 margin-left:20px;
@@ -35,9 +34,6 @@ text-decoration:none;
 font-size:14px;
 }
 
-nav a:hover{color:#00b4d8;}
-
-/* HERO */
 .hero{
 min-height:90vh;
 background:url('images/hero.jpg') center/cover no-repeat;
@@ -48,111 +44,56 @@ color:white;
 }
 
 .hero-content{
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 padding:30px;
 border-radius:8px;
-max-width:500px;
+max-width:600px;
 }
 
-.hero h1{font-size:36px;margin-bottom:10px;}
-
-.btn{
-background:#00b4d8;
-color:white;
-padding:10px 20px;
-display:inline-block;
-margin-top:10px;
-text-decoration:none;
-border-radius:5px;
-}
-
-/* SECTIONS */
 section{padding:60px 8%;}
+
 .title{text-align:center;margin-bottom:30px;font-size:26px;}
 
-/* ABOUT */
-.about{display:flex;gap:30px;flex-wrap:wrap;align-items:center;}
-.about img{width:100%;max-width:450px;border-radius:8px;}
-
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* CARD */
 .card{
 background:white;
-padding:15px;
+padding:20px;
 border-radius:8px;
 box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
-.card img{
-width:100%;
-height:160px;
-object-fit:cover;
-border-radius:6px;
-margin-bottom:10px;
-}
+ul{padding-left:20px;margin-top:10px;}
 
-/* WHY */
-.why{
-background:#0d1b2a;
-color:white;
-}
+.why{background:#0d1b2a;color:white;}
 
-/* CONTACT FORM */
-form{
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-input,textarea{
-padding:10px;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-button{
-background:#00b4d8;
-color:white;
-padding:10px;
-border:none;
-cursor:pointer;
-}
-
-/* FOOTER */
 footer{
 background:#0d1b2a;
 color:white;
 text-align:center;
-padding:15px;
+padding:20px;
 }
 
-/* WHATSAPP */
+/* WhatsApp */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-font-size:24px;
 padding:15px;
 border-radius:50%;
+font-size:24px;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-z-index:1000;
 }
 
-/* MOBILE */
+/* Mobile */
 @media(max-width:768px){
 .hero h1{font-size:26px;}
-.about{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
@@ -165,6 +106,7 @@ z-index:1000;
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#products">Products</a>
+<a href="#business">Business</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
@@ -172,103 +114,115 @@ z-index:1000;
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-<h1>Industrial Supply You Can Trust</h1>
-<p>Engineering, Safety, Packaging & Office Solutions</p>
-<a href="#contact" class="btn">Contact Us</a>
+<h1>Industrial & Office Supply Solutions</h1>
+<p>Engineering, Packaging, Safety, and Office Supplies for Businesses</p>
 </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<h2 class="title">About Us</h2>
+<h2 class="title">About the Company</h2>
 
-<div class="about">
-<img src="images/about.jpg">
-
-<div>
 <p>
 Rudrakshi Enterprises supplies essential engineering, industrial, and office products to businesses, factories, and shops.
 </p>
 
+<h3>Business Objective</h3>
 <ul>
-<li>✔ Quality Products</li>
-<li>✔ Competitive Pricing</li>
-<li>✔ Fast Delivery</li>
-<li>✔ Trusted Supplier</li>
+<li>Provide quality industrial products</li>
+<li>Maintain competitive pricing</li>
+<li>Build long-term customer relationships</li>
+<li>Ensure timely delivery</li>
 </ul>
-</div>
-</div>
 </section>
 
 <!-- PRODUCTS -->
 <section id="products">
-<h2 class="title">Our Products</h2>
+<h2 class="title">Product Categories</h2>
 
 <div class="grid">
 
 <div class="card">
-<img src="images/engineering.jpg">
 <h3>Engineering Items</h3>
-<p>Tools & industrial supplies</p>
+<p>Tools, maintenance hardware, workshop materials, and general engineering supplies.</p>
 </div>
 
 <div class="card">
-<img src="images/packaging.jpg">
-<h3>Packaging</h3>
-<p>Bubble wrap, tapes, films</p>
+<h3>Hydraulic Spares & Consumables</h3>
+<p>Industrial hydraulic components, seals, oils, and consumables.</p>
 </div>
 
 <div class="card">
-<img src="images/safety.jpg">
+<h3>Packaging Items</h3>
+<p>Packaging tapes, stretch film, bubble wrap, and shipping materials.</p>
+</div>
+
+<div class="card">
 <h3>Safety Items</h3>
-<p>Gloves, helmets, PPE</p>
+<p>Gloves, helmets, masks, goggles, jackets, and safety equipment.</p>
 </div>
 
 <div class="card">
-<img src="images/office.jpg">
 <h3>Office Supplies</h3>
-<p>A4 paper & stationery</p>
+<p>A4 papers, stationery, printing papers, and office essentials.</p>
 </div>
 
 <div class="card">
-<img src="images/fasteners.jpg">
 <h3>Fasteners</h3>
-<p>Bolts, nuts & screws</p>
+<p>Bolts, nuts, screws, washers, anchors, and industrial fastening components.</p>
 </div>
 
 </div>
 </section>
 
-<!-- WHY -->
-<section class="why">
-<h2 class="title">Why Choose Us</h2>
+<!-- BUSINESS -->
+<section id="business">
+<h2 class="title">Business Details</h2>
 
-<div class="grid">
-<div class="card">Reliable Supply</div>
-<div class="card">Best Pricing</div>
-<div class="card">Quick Delivery</div>
-<div class="card">Trusted by Businesses</div>
-</div>
+<h3>Target Customers</h3>
+<ul>
+<li>Factories</li>
+<li>Engineering workshops</li>
+<li>Construction companies</li>
+<li>Offices and institutions</li>
+</ul>
+
+<h3>Investment Plan</h3>
+<p>
+Initial investment for stock, packaging, transport, and supplier purchases.
+</p>
+
+<h3>Profit Potential</h3>
+<p>
+Profit comes from wholesale purchasing and contract supply to companies and offices.
+</p>
+
+<h3>Marketing Strategy</h3>
+<ul>
+<li>Local business networking</li>
+<li>Direct supply to factories</li>
+<li>Online promotion</li>
+<li>WhatsApp and social media promotion</li>
+</ul>
+
+<h3>Future Expansion</h3>
+<ul>
+<li>Increase product categories</li>
+<li>Partner with more suppliers</li>
+<li>Expand to larger industrial clients</li>
+</ul>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2 class="title">Contact Us</h2>
+<h2 class="title">Contact Information</h2>
 
-<form action="https://formsubmit.co/rrudrakshi.ent17@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<input type="text" name="phone" placeholder="Phone Number" required>
-<textarea name="message" placeholder="Your Requirement" required></textarea>
-<button type="submit">Send Inquiry</button>
-</form>
-
-<br>
-
-<p style="text-align:center;"><strong>Phone:</strong> 9370793235</p>
-<p style="text-align:center;"><strong>Email:</strong> rrudrakshi.ent17@gmail.com</p>
-<p style="text-align:center;"><strong>Address:</strong> Ambernath West - 421501</p>
-<p style="text-align:center;"><strong>GSTIN:</strong> 27BWIPP8475R1Z8</p>
+<p><strong>Business Name:</strong> Rudrakshi Enterprises</p>
+<p><strong>Phone:</strong> 9370793235</p>
+<p><strong>Email:</strong> rrudrakshi.ent17@gmail.com</p>
+<p><strong>Address:</strong> Javasai, Ambernath West - 421501</p>
+<p><strong>GSTIN:</strong> 27BWIPP8475R1Z8</p>
 
 </section>
 
@@ -276,10 +230,8 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 © 2026 Rudrakshi Enterprises
 </footer>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/919370793235?text=Hello%20I%20want%20to%20order%20industrial%20products" target="_blank" class="whatsapp">
-💬
-</a>
+<!-- WhatsApp -->
+<a href="https://wa.me/919370793235?text=Hello%20I%20want%20industrial%20products" class="whatsapp">💬</a>
 
 </body>
 </html>

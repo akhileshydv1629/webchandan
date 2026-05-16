@@ -322,6 +322,57 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 <section id="contact">
 <h2 class="title">Contact</h2>
 
+<p style="text-align:center;margin-bottom:20px;">
+Tell us what products or supplies you need and we’ll get back to you.
+</p>
+
+<form id="enquiryForm" style="max-width:600px;margin:auto;">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required
+style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"
+>
+
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+required
+style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"
+>
+
+<input
+type="text"
+name="company"
+placeholder="Company / Business Name"
+style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"
+>
+
+<textarea
+name="enquiry"
+placeholder="What do you need? (Engineering items, packaging, safety items, office supplies, bulk order, etc.)"
+rows="5"
+required
+style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"
+></textarea>
+
+<button
+type="submit"
+class="btn"
+style="border:none;cursor:pointer;"
+>
+Send Enquiry
+</button>
+
+<p id="responseMsg" style="margin-top:15px;color:green;"></p>
+
+</form>
+
+<br>
+
 <p><strong>Phone:</strong> 9370793235</p>
 <p><strong>Email:</strong> rrudrakshi.ent17@gmail.com</p>
 <p><strong>Address:</strong> Javasai, Ambernath West - 421501</p>
@@ -334,6 +385,45 @@ Rudrakshi Enterprises supplies essential engineering, industrial, and office pro
 </footer>
 
 <a href="https://wa.me/919370793235" class="whatsapp">💬</a>
+<script>
+document
+.getElementById('enquiryForm')
+.addEventListener('submit', async function(e){
 
+e.preventDefault();
+
+const data =
+Object.fromEntries(
+new FormData(this).entries()
+);
+
+try{
+
+await fetch(
+'https://script.google.com/macros/s/AKfycbxWmE6ADLW6vEAqcKuzglDzayLlPHVCJKM5UTlu_p3q8lH4hyCsi38MKH-3xCO1l4u1/exec',
+{
+method:'POST',
+body:JSON.stringify(data)
+}
+);
+
+document.getElementById(
+'responseMsg'
+).innerText =
+'Enquiry sent successfully! We will contact you soon.';
+
+this.reset();
+
+}catch(error){
+
+document.getElementById(
+'responseMsg'
+).innerText =
+'Something went wrong. Please try again.';
+
+}
+
+});
+</script>
 </body>
 </html>
